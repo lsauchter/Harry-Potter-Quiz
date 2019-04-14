@@ -1,0 +1,70 @@
+body {
+    background: url(http://www.portoalegre.travel/upload/b/134/1344590_marauders-map-live-wallpaper.jpg
+    ) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Text', serif;
+  }
+  
+  header {
+    background: #8B3921;
+    background-size: cover;
+    height: 100px;
+    width: 100%;
+    font-family: 'Quattrocento', serif;
+    color: antiquewhite;
+  }
+  
+  .logo {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+  }
+  
+  .title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100px;
+    width: 300px;
+  }
+
+  .quizInfo {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    padding-top: 15px;
+    padding-right: 15px;
+  }
+  
+  .quizInfo li {
+    list-style: none;
+  }
+
+  .startButton {
+    width: 200px;
+    height: 100px;
+    background-color: #8B3921;
+    background-size: contain;
+    color: antiquewhite;
+    border: 2px solid black;
+    display: block;
+    margin-top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18pt;
+}
+
+@media screen and (max-width: 500px) {
+    .title {
+        height: 60px;
+        width: 180px;
+        top: 25px;
+    }
+}
