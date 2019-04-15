@@ -12,11 +12,13 @@ function startQuiz() {
 
 function displayQuestionNumber() {
     questionNumber++;
+    
 }
 
 function questionTemplate() {
     return `<div class="question">
     <h2>${STORE[questionNumber].question}</h2>
+    </div>
     <form>
     <fieldset class="answers">
     <label>
@@ -33,7 +35,10 @@ function questionTemplate() {
     <label>
     <input type="radio" name="answer" required>
     ${STORE[questionNumber].answer4}
-    </label>`
+    </label>
+    </fieldset>
+    <button type="submit" class="submitButton">Submit</button>
+    </form>`
 }
 
 function renderQuestion() {

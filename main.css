@@ -96,6 +96,21 @@ label {
 
 }
 
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 2px solid black;
+    outline: none;
+}
+
+input:checked {
+    border: 7px solid black;
+}
+
 @media screen and (min-width: 601px) {
     .titleLarge {
     width: 300px;
