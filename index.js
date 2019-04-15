@@ -8,6 +8,11 @@ function startQuiz() {
         renderQuestion();
     }
     )
+    $(document).keypress(function(event) {
+        $('.startPage').remove();
+        renderQuestion();
+    }
+    )
 }
 
 function displayQuestionNumber() {
@@ -17,7 +22,7 @@ function displayQuestionNumber() {
 function displayScore() {
     $('.score').html(`${score}`);
 }
-
+ 
 function questionTemplate() {
     return `<div class="question">
     <h2>${STORE[questionNumber].question}</h2>
@@ -75,7 +80,7 @@ function wrongAnswer() {
 }
 
 function handleSubmitButton() {
-    $('.questionForm').on('submit', function(event) {
+        $('.questionForm').on('submit', function(event) {
         event.preventDefault();
         let answerChoice = $('input:checked').parent('label');
         let answer = answerChoice.text().trim();
@@ -91,11 +96,17 @@ function handleSubmitButton() {
 }
 
 function renderResults() {
-    
+    $('.questionForm').html(
+        `<div class="results">
+        <button type="button" class="restart">Restart</button>
+        </div>`
+    );
+    $('body').removeClass('quiz').addClass('end');
 }
+
 function nextQuestion() {
     $('.questionForm').on('click', '.next', function(event) {
-        if (questionNumber === 10) {
+        if (questionNumber === 9) {
             renderResults();
         }
         else {
@@ -105,11 +116,17 @@ function nextQuestion() {
     });
 }
 
+function handleRestartButton() {
+    $('.questionForm').on('click', '.restart', function(event) {
+        location.reload();
+    })
+}
+
 function runQuiz() {
     startQuiz();
     handleSubmitButton();
     nextQuestion();
-  //  handleRestartButton();
+    handleRestartButton();
     console.log('runQuiz ran');
 }
 

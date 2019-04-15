@@ -1,14 +1,17 @@
 body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Crimson Text', serif;
+  }
+
+  .quiz {
     background: url(http://www.portoalegre.travel/upload/b/134/1344590_marauders-map-live-wallpaper.jpg
     ) no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Crimson Text', serif;
   }
   
   header {
@@ -38,12 +41,13 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    padding-top: 15px;
-    padding-right: 10px;
+    padding-top: 10px;
+    padding-right: 7.5px;
   }
   
   .quizInfo li {
     list-style: none;
+    padding-bottom: 10px;
   }
 
   button {
@@ -66,6 +70,7 @@ body {
 
 .questionForm {
     display: block;
+    width: 100%;
 }
 
 .question {
@@ -127,10 +132,6 @@ input:checked {
     font-weight: 800;
 }
 
-.feedback img {
-    max-width: 75%;
-}
-
 @media screen and (min-width: 601px) {
     .titleLarge {
     width: 300px;
@@ -140,6 +141,19 @@ input:checked {
     .titleSmall {
     display: none;
     }
+
+    .feedback img {
+        max-width: 75%;
+    }
+
+    .end {
+        background: url(https://rukminim1.flixcart.com/image/832/832/poster/y/m/w/athah-pop-art-postermischief-managed-scroll-paper-print-rolled-original-imaefff6tfzpdcnb.jpeg?q=70
+        ) no-repeat center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
 }
 
 @media screen and (max-width: 600px) {
@@ -150,4 +164,19 @@ input:checked {
 
     .titleLarge {
     display: none;
+    }
+
+    .feedback img {
+        width: 100%;
+    }
+
+    .end {
+        background: url(https://rukminim1.flixcart.com/image/832/832/poster/y/m/w/athah-pop-art-postermischief-managed-scroll-paper-print-rolled-original-imaefff6tfzpdcnb.jpeg?q=70
+        ) repeat center fixed;
+        -webkit-background-size: auto;
+        -moz-background-size: auto;
+        -o-background-size: auto;
+        background-size: auto;
+      }
+
     }
