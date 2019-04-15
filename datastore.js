@@ -72,7 +72,7 @@ const STORE = [
         correctAnswer: `Godric's Hollow`
     },
     {
-        question: 'What is also know as the Come and Go Room?',
+        question: 'What is also known as the Come and Go Room?',
         answer1: 'The bathroom',
         answer2: 'The Room of Requirement',
         answer3: 'The Great Hall',
