@@ -16,7 +16,7 @@ const STORE = [
         correctAnswer: 'Ravenclaw'
     },
     {
-        question: `Harry's patronus takes the shape of what animal?`,
+        question: `Harry's patronus appears as what animal?`,
         answer1: 'Otter',
         answer2: 'Doe',
         answer3: 'Stag',
