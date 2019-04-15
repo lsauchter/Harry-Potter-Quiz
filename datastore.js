@@ -40,7 +40,7 @@ const STORE = [
         correctAnswer: 'Snitch'
     },
     {
-        question: `Who guarded the entrance to the Sorcer's Stone hiding place?`,
+        question: `Who guarded the entrance to the Sorcerer's Stone hiding place?`,
         answer1: 'Fang',
         answer2: 'Buckbeak',
         answer3: 'Norbert',

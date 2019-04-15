@@ -84,7 +84,6 @@ body {
     color: black;
     text-align: center;
     font-family: 'Quattrocento', serif;
-    font-size: 18pt;
     font-weight: 800;
 }
 
@@ -148,6 +147,10 @@ input:checked {
     display: none;
     }
 
+    .question {
+    font-size: 18pt;
+    }
+    
     label {
         padding: 20px;
     }
@@ -182,6 +185,10 @@ input:checked {
 
     .feedback img {
         width: 100%;
+    }
+
+    .question {
+        font-size: 14pt;
     }
 
     label {
