@@ -128,7 +128,7 @@ input:checked {
 }
 
 .feedback img {
-    width: 60%;
+    max-width: 75%;
 }
 
 @media screen and (min-width: 601px) {
@@ -151,8 +151,3 @@ input:checked {
     .titleLarge {
     display: none;
     }
-
-    .feedback img {
-        width: 100%;
-    }
-}

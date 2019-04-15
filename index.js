@@ -8,14 +8,14 @@ function startQuiz() {
         renderQuestion();
     }
     )
-    console.log('startQuiz ran');
 }
 
 function displayQuestionNumber() {
-    questionNumber++;
-    $('.questionNumber').html(`${questionNumber}`);
-    console.log('displayQuestionNumber ran')
-    
+    $('.questionNumber').html(`${questionNumber + 1}`);
+}
+
+function displayScore() {
+    $('.score').html(`${score}`);
 }
 
 function questionTemplate() {
@@ -47,23 +47,31 @@ function questionTemplate() {
 function renderQuestion() {
     $('.questionForm').html(questionTemplate());
     displayQuestionNumber();
-    console.log('renderQuestion ran');
 }
 
 function correctAnswer() {
-    console.log('correctAnswer ran');
     $('.questionForm').html(
        `<div class="feedback">
        <h2>Great!</h2>
        <img src="https://media1.tenor.com/images/5e35fe87910ea9d4ec7140489d9cc70a/tenor.gif"
        alt="Hogwarts students cheering" />
-       <button type="button">Next</button>
+       <button type="button" class="next">Next</button>
        </div>`
     )
+    score++;
+    displayScore();
 }
 
 function wrongAnswer() {
-    console.log('wrongAnswer ran');
+    $('.questionForm').html(
+        `<div class="feedback">
+        <h2>Oh no!</h2>
+        <img src="https://em.wattpad.com/e156104cd6256ca40497f96eb41772b3d1ca1917/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f67676555684a336658316f5742513d3d2d39332e313434346233616434313363326339622e676966
+        "
+        alt="Fred and George yelling" />
+        <button type="button" class="next">Next</button>
+        </div>`
+     )
 }
 
 function handleSubmitButton() {
@@ -71,7 +79,9 @@ function handleSubmitButton() {
         event.preventDefault();
         let answerChoice = $('input:checked').parent('label');
         let answer = answerChoice.text().trim();
-        if (answer == STORE[questionNumber - 1].correctAnswer) {
+        console.log(answer);
+        console.log(STORE[questionNumber].correctAnswer);
+        if (answer == STORE[questionNumber].correctAnswer) {
             correctAnswer();
         }
         else {
@@ -80,11 +90,25 @@ function handleSubmitButton() {
     });
 }
 
+function renderResults() {
+    
+}
+function nextQuestion() {
+    $('.questionForm').on('click', '.next', function(event) {
+        if (questionNumber === 10) {
+            renderResults();
+        }
+        else {
+        questionNumber++
+        renderQuestion();
+        }
+    });
+}
 
 function runQuiz() {
     startQuiz();
     handleSubmitButton();
-   // nextQuestion();
+    nextQuestion();
   //  handleRestartButton();
     console.log('runQuiz ran');
 }
