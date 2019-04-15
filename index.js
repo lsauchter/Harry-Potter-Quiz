@@ -12,6 +12,7 @@ function startQuiz() {
 
 function displayQuestionNumber() {
     questionNumber++;
+    $('.questionNumber').html(`${questionNumber}`);
     
 }
 
@@ -43,6 +44,7 @@ function questionTemplate() {
 
 function renderQuestion() {
     $('.questionForm').html(questionTemplate());
+    displayQuestionNumber();
 }
 
 
