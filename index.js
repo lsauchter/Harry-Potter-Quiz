@@ -24,20 +24,17 @@ function questionTemplate() {
     </div>
     <form>
     <fieldset class="answers">
-    <label>
-    <input type="radio" name="answer" class="answer" required>
-    ${STORE[questionNumber].answer1}
-    </label><label>
-    <input type="radio" name="answer" class="answer" required>
-    ${STORE[questionNumber].answer2}
+    <input type="radio" name="answer" id="answer1" checked required>
+    <label for="answer1">${STORE[questionNumber].answer1}
     </label>
-    <label>
-    <input type="radio" name="answer" class="answer" required>
-    ${STORE[questionNumber].answer3}
+    <input type="radio" name="answer" id="answer2" required>
+    <label for="answer2">${STORE[questionNumber].answer2}
     </label>
-    <label>
-    <input type="radio" name="answer" class="answer" required>
-    ${STORE[questionNumber].answer4}
+    <input type="radio" name="answer" id="answer3" required>
+    <label for="answer3">${STORE[questionNumber].answer3}
+    </label>
+    <input type="radio" name="answer" id="answer4" required>
+    <label for="answer4">${STORE[questionNumber].answer4}
     </label>
     </fieldset>
     <label>
@@ -79,7 +76,7 @@ function wrongAnswer() {
 function handleSubmitButton() {
         $('.questionForm').on('submit', function(event) {
         event.preventDefault();
-        let answerChoice = $('input:checked').parent('label');
+        let answerChoice = $('input:checked').next('label');
         let answer = answerChoice.text().trim();
         console.log(answer);
         console.log(STORE[questionNumber].correctAnswer);

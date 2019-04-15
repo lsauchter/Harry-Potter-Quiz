@@ -111,7 +111,7 @@ label {
     padding: 20px;
 }
 
-.answer {
+input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -124,7 +124,11 @@ label {
     top: 5px;
 }
 
-.answer:checked {
+.answers:focus-within {
+    outline: 2px solid antiquewhite;
+}
+
+input:checked {
     border: 7.5px solid black;
 }
 
