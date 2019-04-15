@@ -8,11 +8,13 @@ function startQuiz() {
         renderQuestion();
     }
     )
+    console.log('startQuiz ran');
 }
 
 function displayQuestionNumber() {
     questionNumber++;
     $('.questionNumber').html(`${questionNumber}`);
+    console.log('displayQuestionNumber ran')
     
 }
 
@@ -45,14 +47,38 @@ function questionTemplate() {
 function renderQuestion() {
     $('.questionForm').html(questionTemplate());
     displayQuestionNumber();
+    console.log('renderQuestion ran');
+}
+
+function correctAnswer() {
+    console.log('correctAnswer ran');
+}
+
+function wrongAnswer() {
+    console.log('wrongAnswer ran');
+}
+
+function handleSubmitButton() {
+    $('.questionForm').on('submit', function(event) {
+        event.preventDefault();
+        let answerChoice = $('input:checked').parent('label');
+        let answer = answerChoice.text().trim();
+        if (answer == STORE[questionNumber - 1].correctAnswer) {
+            correctAnswer();
+        }
+        else {
+            wrongAnswer();
+        }
+    });
 }
 
 
 function runQuiz() {
     startQuiz();
-   // handleSubmitButton();
+    handleSubmitButton();
    // nextQuestion();
   //  handleRestartButton();
+    console.log('runQuiz ran');
 }
 
 $(runQuiz())
