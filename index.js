@@ -24,22 +24,24 @@ function questionTemplate() {
     </div>
     <form>
     <fieldset class="answers">
+    <label>
     <input type="radio" name="answer" id="answer1" checked required>
-    <label for="answer1">${STORE[questionNumber].answer1}
+    ${STORE[questionNumber].answer1}
     </label>
+    <label>
     <input type="radio" name="answer" id="answer2" required>
-    <label for="answer2">${STORE[questionNumber].answer2}
+    ${STORE[questionNumber].answer2}
     </label>
+    <label>
     <input type="radio" name="answer" id="answer3" required>
-    <label for="answer3">${STORE[questionNumber].answer3}
+    ${STORE[questionNumber].answer3}
     </label>
+    <label>
     <input type="radio" name="answer" id="answer4" required>
-    <label for="answer4">${STORE[questionNumber].answer4}
+    ${STORE[questionNumber].answer4}
     </label>
     </fieldset>
-    <label>
-    <input type="submit" class="submitButton">Submit
-    </label>
+    <input type="submit" class="submitButton" value="Submit">
     </form>`
 }
 

@@ -120,12 +120,10 @@ input[type="radio"] {
     height: 15px;
     border: 2px solid black;
     outline: none;
-    position: relative;
-    top: 5px;
 }
 
 .answers:focus-within {
-    outline: 2px solid antiquewhite;
+    outline: 2px solid black;
 }
 
 input:checked {
