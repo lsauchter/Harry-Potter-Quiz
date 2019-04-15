@@ -50,14 +50,6 @@ body {
     padding-bottom: 10px;
   }
 
-  .submitButton {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance: none;
-    
-  }
-
   button, .submitButton {
     width: 150px;
     height: 75px;
@@ -66,7 +58,7 @@ body {
     color: antiquewhite;
     border: 2px solid black;
     display: block;
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -93,39 +85,35 @@ body {
 .answers {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
     height: 40%;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-    background-color: rgba(230, 188, 99, 0.975);
-    color: black;
     font-family: inherit;
     font-weight: bold;
-    text-align: left;
     border: none;
 }
 
+label {
+    background-color: rgba(230, 188, 99, 0.975);
+    color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    height: 10%;
+}
+
 input[type="radio"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    border: 2px solid black;
+    opacity: 0;
     outline: none;
-    position: relative;
-    top: 5px;
+    margin-left: -21px;
 }
 
-.answers:focus-within {
-    outline: 2px solid black;
-}
-
-input:checked {
-    border: 7.5px solid black;
+label:focus-within{
+    outline: 2px solid antiquewhite;
 }
 
 .feedback {
@@ -160,7 +148,9 @@ input:checked {
     }
 
     label {
-        padding: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 75%;
     }
 
     button, .submitButton {
@@ -168,7 +158,8 @@ input:checked {
     }
 
     .feedback img {
-        max-width: 75%;
+        width: 75%;
+        max-width: 750px;
     }
 
     .end {
@@ -204,7 +195,9 @@ input:checked {
     }
 
     label {
-        padding: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
     }
 
     button, .submitButton {

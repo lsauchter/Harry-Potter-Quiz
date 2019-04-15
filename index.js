@@ -70,8 +70,8 @@ function wrongAnswer() {
         <img src="https://em.wattpad.com/e156104cd6256ca40497f96eb41772b3d1ca1917/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f67676555684a336658316f5742513d3d2d39332e313434346233616434313363326339622e676966
         "
         alt="Fred and George yelling" />
-        <button type="button" class="next">Next</button>
-        </div>`
+        </div>
+        <button type="button" class="next">Next</button>`
      )
 }
 
