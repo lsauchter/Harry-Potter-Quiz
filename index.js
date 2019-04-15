@@ -78,7 +78,7 @@ function wrongAnswer() {
 function handleSubmitButton() {
         $('.questionForm').on('submit', function(event) {
         event.preventDefault();
-        let answerChoice = $('input:checked').next('label');
+        let answerChoice = $('input:checked').parent('label');
         let answer = answerChoice.text().trim();
         console.log(answer);
         console.log(STORE[questionNumber].correctAnswer);
