@@ -67,7 +67,6 @@ body {
     border: 2px solid black;
     display: block;
     position: absolute;
-    bottom: 50px;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -105,10 +104,6 @@ body {
     font-weight: bold;
     text-align: left;
     border: none;
-}
-
-label {
-    padding: 20px;
 }
 
 input[type="radio"] {
@@ -153,6 +148,14 @@ input:checked {
     display: none;
     }
 
+    label {
+        padding: 20px;
+    }
+
+    button, .submitButton {
+        bottom: 25px;
+    }
+
     .feedback img {
         max-width: 75%;
     }
@@ -179,6 +182,14 @@ input:checked {
 
     .feedback img {
         width: 100%;
+    }
+
+    label {
+        padding: 10px;
+    }
+
+    button, .submitButton {
+        bottom: 25px;
     }
 
     .end {
