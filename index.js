@@ -30,18 +30,18 @@ function questionTemplate() {
     <form>
     <fieldset class="answers">
     <label>
-    <input type="radio" name="answer" required>
+    <input type="radio" name="answer" tabindex="1" required>
     ${STORE[questionNumber].answer1}
     </label><label>
-    <input type="radio" name="answer" required>
+    <input type="radio" name="answer" tabindex="2" required>
     ${STORE[questionNumber].answer2}
     </label>
     <label>
-    <input type="radio" name="answer" required>
+    <input type="radio" name="answer" tabindex="3" required>
     ${STORE[questionNumber].answer3}
     </label>
     <label>
-    <input type="radio" name="answer" required>
+    <input type="radio" name="answer" tabindex="4" required>
     ${STORE[questionNumber].answer4}
     </label>
     </fieldset>

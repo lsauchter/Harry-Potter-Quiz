@@ -83,6 +83,7 @@ body {
 
 .answers {
     display: flex;
+    flex-direction: column;
     width: 75%;
     height: 40%;
     margin-left: auto;
