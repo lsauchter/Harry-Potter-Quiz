@@ -52,6 +52,14 @@ function renderQuestion() {
 
 function correctAnswer() {
     console.log('correctAnswer ran');
+    $('.questionForm').html(
+       `<div class="feedback">
+       <h2>Great!</h2>
+       <img src="https://media1.tenor.com/images/5e35fe87910ea9d4ec7140489d9cc70a/tenor.gif"
+       alt="Hogwarts students cheering" />
+       <button type="button">Next</button>
+       </div>`
+    )
 }
 
 function wrongAnswer() {
