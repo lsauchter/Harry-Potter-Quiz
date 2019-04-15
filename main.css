@@ -189,7 +189,7 @@ input:checked {
     }
 
     button, .submitButton {
-        bottom: 25px;
+        bottom: 10px;
     }
 
     .end {
