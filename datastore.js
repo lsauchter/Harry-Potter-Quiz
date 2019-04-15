@@ -32,7 +32,7 @@ const STORE = [
         correctAnswer: 7
     },
     {
-        question: 'Which ball must be caught to end a quidditch match?',
+        question: 'Which ball is caught to end a quidditch match?',
         answer1: 'Snitch',
         answer2: 'Bludger',
         answer3: 'Quaffle',
@@ -40,7 +40,7 @@ const STORE = [
         correctAnswer: 'Snitch'
     },
     {
-        question: `Who guarded the entrance to the Sorcerer's Stone hiding place?`,
+        question: `Who guards the the Sorcerer's Stone?`,
         answer1: 'Fang',
         answer2: 'Buckbeak',
         answer3: 'Norbert',
