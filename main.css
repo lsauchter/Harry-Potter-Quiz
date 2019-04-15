@@ -129,6 +129,27 @@ label:focus-within{
     font-weight: 800;
 }
 
+.finalScore {
+    display: block;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-size: cover;
+    top: 45%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+   
+    text-align: center;
+}
+
+.scoreText {
+    color: #8B3921;
+    font-size: 30pt;
+    text-shadow: 1px 1px 0px antiquewhite, -1px -1px 0px antiquewhite, -1px 1px 0px antiquewhite, 1px -1px 0px antiquewhite;
+    font-family: 'Quattrocento', serif;
+}
+
 @media screen and (min-width: 601px) {
     .titleLarge {
     width: 300px;
@@ -144,7 +165,7 @@ label:focus-within{
     }
 
     .answers {
-        font-size: 18pt;
+    font-size: 18pt;
     }
 
     label {

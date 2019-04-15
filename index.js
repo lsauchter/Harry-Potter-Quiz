@@ -94,6 +94,9 @@ function handleSubmitButton() {
 function renderResults() {
     $('.questionForm').html(
         `<div class="results">
+        <div class="finalScore">
+        <h2 class="scoreText">Final Score - ${score}/10</h2>
+        </div>
         <button type="button" class="restart">Restart</button>
         </div>`
     );
