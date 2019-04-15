@@ -8,11 +8,6 @@ function startQuiz() {
         renderQuestion();
     }
     )
-    $(document).keypress(function(event) {
-        $('.startPage').remove();
-        renderQuestion();
-    }
-    )
 }
 
 function displayQuestionNumber() {
@@ -30,22 +25,24 @@ function questionTemplate() {
     <form>
     <fieldset class="answers">
     <label>
-    <input type="radio" name="answer" tabindex="1" required>
+    <input type="radio" name="answer" class="answer" required>
     ${STORE[questionNumber].answer1}
     </label><label>
-    <input type="radio" name="answer" tabindex="2" required>
+    <input type="radio" name="answer" class="answer" required>
     ${STORE[questionNumber].answer2}
     </label>
     <label>
-    <input type="radio" name="answer" tabindex="3" required>
+    <input type="radio" name="answer" class="answer" required>
     ${STORE[questionNumber].answer3}
     </label>
     <label>
-    <input type="radio" name="answer" tabindex="4" required>
+    <input type="radio" name="answer" class="answer" required>
     ${STORE[questionNumber].answer4}
     </label>
     </fieldset>
-    <button type="submit" class="submitButton">Submit</button>
+    <label>
+    <input type="submit" class="submitButton">Submit
+    </label>
     </form>`
 }
 

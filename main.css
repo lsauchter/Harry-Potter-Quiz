@@ -50,7 +50,15 @@ body {
     padding-bottom: 10px;
   }
 
-  button {
+  .submitButton {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    
+  }
+
+  button, .submitButton {
     width: 150px;
     height: 75px;
     background-color: #8B3921;
@@ -103,7 +111,7 @@ label {
     padding: 20px;
 }
 
-input {
+.answer {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -116,8 +124,8 @@ input {
     top: 5px;
 }
 
-input:checked {
-    border: 7px solid black;
+.answer:checked {
+    border: 7.5px solid black;
 }
 
 .feedback {
