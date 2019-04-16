@@ -6,8 +6,7 @@ function startQuiz() {
     $('.startButton').click(function(event) {
         $('.startPage').remove();
         renderQuestion();
-    }
-    )
+    })
 }
 
 function displayQuestionNumber() {
@@ -80,8 +79,6 @@ function handleSubmitButton() {
         event.preventDefault();
         let answerChoice = $('input:checked').parent('label');
         let answer = answerChoice.text().trim();
-        console.log(answer);
-        console.log(STORE[questionNumber].correctAnswer);
         if (answer == STORE[questionNumber].correctAnswer) {
             correctAnswer();
         }
@@ -126,7 +123,6 @@ function runQuiz() {
     handleSubmitButton();
     nextQuestion();
     handleRestartButton();
-    console.log('runQuiz ran');
 }
 
 $(runQuiz())
