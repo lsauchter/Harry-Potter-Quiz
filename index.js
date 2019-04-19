@@ -24,7 +24,7 @@ function questionTemplate() {
     <form>
     <fieldset class="answers">
     <label>
-    <input type="radio" name="answer" id="answer1" checked required>
+    <input type="radio" name="answer" id="answer1" required>
     ${STORE[questionNumber].answer1}
     </label>
     <label>
