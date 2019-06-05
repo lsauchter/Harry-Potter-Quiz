@@ -9,4 +9,4 @@ This app was written using HTML, CSS, JavaScript, and jQuery.
 ## Live Page
 [https://lsauchter.github.io/Harry-Potter-Quiz/](https://lsauchter.github.io/Harry-Potter-Quiz/)
 
-<img src="images/ScreenShot.jpg" width="300" height="535" />
+<img src="images/ScreenShot.jpg" width="556" height="400" />
