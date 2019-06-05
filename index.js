@@ -4,7 +4,7 @@ let score = 0;
 
 function startQuiz() {
     $('.startButton').click(function(event) {
-        $('.startPage').remove();
+        $('.startPage').hide();
         renderQuestion();
     })
 }
@@ -18,10 +18,10 @@ function displayScore() {
 }
  
 function questionTemplate() {
-    return `<div class="question">
+    return `<form>
+    <legend class="question">
     <h2>${STORE[questionNumber].question}</h2>
-    </div>
-    <form>
+    </legend>
     <fieldset class="answers">
     <label>
     <input type="radio" name="answer" id="answer1" required>
@@ -52,7 +52,7 @@ function renderQuestion() {
 function correctAnswer() {
     $('.questionForm').html(
        `<div class="feedback">
-       <h2>Great!</h2>
+       <p>Great!</p>
        <img src="https://media1.tenor.com/images/5e35fe87910ea9d4ec7140489d9cc70a/tenor.gif"
        alt="Hogwarts students cheering" />
        <button type="button" class="next">Next</button>
@@ -65,7 +65,7 @@ function correctAnswer() {
 function wrongAnswer() {
     $('.questionForm').html(
         `<div class="feedback">
-        <p>Actually, it was ${STORE[questionNumber].correctAnswer}<p>
+        <p>Actually, it was ${STORE[questionNumber].correctAnswer}</p>
         <img src="https://em.wattpad.com/e156104cd6256ca40497f96eb41772b3d1ca1917/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f67676555684a336658316f5742513d3d2d39332e313434346233616434313363326339622e676966
         "
         alt="Fred and George yelling" />
@@ -114,7 +114,13 @@ function nextQuestion() {
 
 function handleRestartButton() {
     $('.questionForm').on('click', '.restart', function(event) {
-        location.reload();
+        $('body').removeClass('end').addClass('quiz');
+        $('.questionForm').empty();
+        $('.startPage').show();
+        $('.questionNumber').html(`0`);
+        questionNumber = 0;
+        score = 0;
+        displayScore();
     })
 }
 

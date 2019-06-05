@@ -5,7 +5,7 @@ body {
     font-family: 'Crimson Text', serif;
   }
 
-  .quiz {
+.quiz {
     background: url(http://www.portoalegre.travel/upload/b/134/1344590_marauders-map-live-wallpaper.jpg
     ) no-repeat center fixed;
     -webkit-background-size: cover;
@@ -14,7 +14,7 @@ body {
     background-size: cover;
   }
   
-  header {
+header {
     background: #8B3921;
     background-size: cover;
     height: 100px;
@@ -23,13 +23,13 @@ body {
     color: antiquewhite;
   }
   
-  .logo {
+.logo {
     position: absolute;
     width: 100px;
     height: 100px;
   }
   
-  .titleSmall, .titleLarge {
+.titleSmall, .titleLarge {
     position: absolute;
     left: 0;
     right: 0;
@@ -37,7 +37,7 @@ body {
     margin-right: auto;
   }
 
-  .quizInfo {
+.quizInfo {
     position: absolute;
     top: 0;
     right: 0;
@@ -45,12 +45,12 @@ body {
     padding-right: 7.5px;
   }
   
-  .quizInfo li {
+.quizInfo li {
     list-style: none;
     padding-bottom: 10px;
   }
 
-  button, .submitButton {
+button, .submitButton {
     width: 150px;
     height: 75px;
     background-color: #8B3921;
@@ -77,15 +77,22 @@ body {
     text-align: center;
     font-family: 'Quattrocento', serif;
     font-weight: 800;
-    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
+}
+
+h2 {
+    background: rgb(250, 235, 215, 0.8);
+    padding: 20px 0;
+    margin-bottom: 20px;
 }
 
 .answers {
     display: flex;
     flex-direction: column;
     height: 40%;
+    padding-left: 0;
+    padding-right: 0;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -103,6 +110,7 @@ label {
     margin-right: auto;
     margin-bottom: 10px;
     height: 10%;
+    cursor: pointer;
 }
 
 input[type="radio"] {
@@ -129,6 +137,13 @@ label:focus-within{
     font-weight: 800;
 }
 
+.feedback > p {
+    font-size: 28pt;
+    font-weight: bolder;
+    background: rgb(250, 235, 215, 0.8);
+    padding: 20px 0;
+}
+
 .finalScore {
     display: block;
     position: absolute;
@@ -152,34 +167,43 @@ label:focus-within{
 
 @media screen and (min-width: 601px) {
     .titleLarge {
-    width: 300px;
-    height: 100px;
-}
+        width: 300px;
+        height: 100px;
+    }
     
     .titleSmall {
-    display: none;
+        display: none;
+    }
+
+    form {
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .question {
-    font-size: 20pt;
+        font-size: 20pt;
+        width: 100%;
     }
 
     .answers {
-    font-size: 18pt;
+        font-size: 18pt;
     }
 
     label {
         padding-top: 20px;
         padding-bottom: 20px;
-        width: 75%;
     }
 
     button, .submitButton {
         bottom: 25px;
     }
 
-    .feedback img {
+    .feedback {
         width: 75%;
+    }
+
+    .feedback img {
         max-width: 750px;
     }
 
@@ -195,20 +219,29 @@ label:focus-within{
 
 @media screen and (max-width: 600px) {
     .titleSmall {
-    width: 90px;
-    height: 100px;
+        width: 90px;
+        height: 100px;
     }
 
     .titleLarge {
-    display: none;
+        display: none;
+    }
+
+    .feedback {
+        width: 100%;
     }
 
     .feedback img {
         width: 100%;
     }
 
+    form {
+        width: 100%;
+    }
+
     .question {
         font-size: 18pt;
+        width: 100%;
     }
 
     .answers {
@@ -218,7 +251,6 @@ label:focus-within{
     label {
         padding-top: 10px;
         padding-bottom: 10px;
-        width: 100%;
     }
 
     button, .submitButton {
@@ -232,6 +264,6 @@ label:focus-within{
         -moz-background-size: auto;
         -o-background-size: auto;
         background-size: auto;
-      }
-
     }
+
+}
