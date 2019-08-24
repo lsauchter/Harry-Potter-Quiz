@@ -85,6 +85,7 @@ h2 {
     background: rgb(250, 235, 215, 0.8);
     padding: 20px 0;
     margin-bottom: 20px;
+    font-size: 22pt;
 }
 
 .answers {
@@ -133,12 +134,10 @@ label:focus-within{
     margin: auto;
     color: black;
     font-family: 'Quattrocento', serif;
-    font-size: 28pt;
-    font-weight: 800;
 }
 
 .feedback > p {
-    font-size: 28pt;
+    font-size: 22pt;
     font-weight: bolder;
     background: rgb(250, 235, 215, 0.8);
     padding: 20px 0;
